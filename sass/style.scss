@@ -1,54 +1,70 @@
-    body {
-        font-family: sans-serif;
-        margin: 0 auto;
+body {
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#app {
+    margin: 0 auto;
+    width: 400px;
+}
+
+.contactsList {
+    padding: 0;
+}
+
+.contactForm {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+        width: 250px;
+        margin-bottom: 5px;
+        border-radius: 3px;
     }
-    
-    * {
-        box-sizing: border-box;
-    }
-    
-    .contactForm {
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 50px;
-        input {
-            border-left: 1px solid #3C4C59;
-            border-right: 1px solid #3C4C59;
-            border-top: 1px solid #3C4C59;
-        }
-        button {
-            margin-top: 15px;
-        }
-    }
-    
-    .contactForm,
-    .contactsList {
-        width: 500px;
-        margin: 0 auto;
-    }
-    
-    .contactsList {
-        padding: 0;
-        .contactItem {
-            position: relative;
-            border-left: 1px solid #3C4C59;
-            border-right: 1px solid #3C4C59;
-            border-top: 1px solid #3C4C59;
-            background-color: #8EA8BF;
-            &:nth-child(even) {
-                background-color: #ADC5D9;
-            }
-            &:last-child {
-                border-bottom: 1px solid #3C4C59;
-            }
-            p,
-            a {
-                margin-left: 125px;
-                text-decoration: none;
-            }
-            img {
-                border: 1px solid #D9CCC1;
-                position: absolute;
-            }
+    button {
+        background-color: #1E5CD9;
+        color: #fff;
+        border: #1E5CD9 solid 2px;
+        border-radius: 6px;
+        height: 35px;
+        cursor: pointer;
+        font-weight: bold;
+        &:hover {
+            border: #1E5CD9 solid 2px;
+            background-color: #fff;
+            color: #1E5CD9;
         }
     }
+}
+
+.contactItem {
+    position: relative;
+    padding: 15px 0;
+    background-color: #5A86BF;
+    border: 1px black solid;
+    border-bottom: none;
+    &:last-child {
+        border: 1px black solid;
+    }
+    &:nth-child(odd) {
+        background-color: #759CBF;
+    }
+    img {
+        position: absolute;
+        left: 15px;
+    }
+    p,
+    a {
+        margin-top: 0;
+        margin-left: 125px;
+    }
+    a {
+        text-transform: none;
+        color: #0433BF;
+    }
+}
